@@ -1,9 +1,11 @@
 {
   "name": "pet-project",
   "version": "1.0.0",
-  "description": "",
+  "description": "Pet project to practice CI",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
