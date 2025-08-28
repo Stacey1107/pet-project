@@ -8,9 +8,14 @@ on:
         required: true
         default: 'main'
       browser:
-        description: 'Browser to run tests on (chromium, firefox, webkit)'
+        description: 'Browser to run tests'
         required: true
         default: 'chromium'
+        type: choice
+        options:
+          - chromium
+          - firefox
+          - webkit
 
 jobs:
   test:
