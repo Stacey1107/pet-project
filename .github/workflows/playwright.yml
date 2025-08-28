@@ -36,6 +36,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+       # Install system dependencies only if browser == webkit
+      - name: Install Playwright deps for WebKit
+        if: ${{ github.event.inputs.browser == 'webkit' }}
+        run: npx playwright install-deps
+
       - name: Install Playwright Browser
         run: npx playwright install ${{ github.event.inputs.browser }}
 
